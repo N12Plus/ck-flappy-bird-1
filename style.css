@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+<meta name="viewport" content= "width=device-width, user-scalable=no">
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+canvas { background-color: lightblue }
+
+#invisibleButton {
+    opacity: 0; /* Makes the button invisible */
+    width: 757px; /*most of these posiions are changed later*/
+    height: 285px; 
+    position: absolute; 
+    left: 10px; 
+     top: 850px; }
+  
+
+
+#invisiblecont {
+  opacity: 0; /* Makes the button invisible */
+  width: 10px; /*most of these positions are changed later*/
+  height: 100px; 
+  position: absolute; 
+  left: 50px; 
+  top: 0px; }
