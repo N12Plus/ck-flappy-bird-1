@@ -28,10 +28,10 @@ if (score>highscore) {highscore = score}
 
 function restartbutton() {
 
-    if (Height > Width) {
+    
     ctx.drawImage(imgrez, Width/2-157*heightMod, Height/1.2, 282*heightMod, 84*heightMod);
     ctx.drawImage(imgcontinue, Width/2-157*heightMod, Height/1.5, 300*heightMod, 84*heightMod)
-     }
+    
 
 
   contbutton.style.left = `0px`;
