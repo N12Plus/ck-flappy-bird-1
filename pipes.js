@@ -6,6 +6,7 @@ function createPipe() {
   pipes.push({x:Width, y:0, h:gapHeight, w:pipeWidth})  //creates a pipe objecta and adds it to the array
   pipes.push({x:Width, y:gapHeight+gap, h:Height, w:pipeWidth})
   totalPipes += 2
+  pipeSpawned += 1
 }
 
 pipeInterval = setInterval(createPipe,interval)  //creates the pipes 

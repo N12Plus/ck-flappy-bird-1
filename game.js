@@ -10,7 +10,7 @@ function updateGame() {
   updateBird()  
   drawPipes()
   drawScore() //moves and draws everything
-  collision() //detects collisons
+  //collision() //detects collisons
    ctx.fillStyle = grassColour
   ctx.fillRect(0,grass.y,Width,grass.h)  //draws floor
 }

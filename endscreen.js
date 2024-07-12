@@ -46,6 +46,7 @@ function gameoverstuff() { //fills the screen with white for the endscreen
   ctx.drawImage(imgend, 0, yMargins, Height*2/3, Height-yMargins*2)  //draws the end screen (or part of it)
   drawText()  
    clearInterval(pipeInterval)
+   pipeSpawned = 0
 }   
 
 
