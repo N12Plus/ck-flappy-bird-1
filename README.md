@@ -2,7 +2,7 @@
 All the .ts files
 images.js
 
-## How to use functions
+## How to use this function
 ### **createNumber(variable, x, y, size)** 
  - variable-this is the varible or number that will be printed out
  - x is the x position of the first digit
