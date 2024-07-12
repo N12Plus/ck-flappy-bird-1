@@ -1,44 +1,22 @@
 rezbutton.style.display = "none"
-contbutton.style.display = "none"
+contbutton.style.display = "none"  //buttons cannot be clicked
+
 function drawText() {
-if (score>highscore) {highscore = score}
-
-  const text1 = score;
-  const text2 = coins
-  const text3 =  highscore
-   fontSize = Math.round(Height/11);
-
-  // Set the font size
-  ctx.font = `${fontSize}px pixelify sans`;
-
-  // Calculate the vertical position (centered)
-  const textY = Height / 2 
-
-  // Set text alignment and color
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'middle'; // Center the text vertically
-  ctx.fillStyle = 'black';
-
-  // Draw the text at the left edge
-  ctx.fillText(text1, Height/3, Height/2.5);
-  ctx.fillText(text2,Height/3.2,Height/2)
-  ctx.fillText(text3,Height/1.8,Height/1.62)
+ if (score>highscore) {highscore = score}
+  printscore()
   restartbutton()
 }
 
 function restartbutton() {
-
-    
-    ctx.drawImage(imgrez, Width/2-157*heightMod, Height/1.2, 282*heightMod, 84*heightMod);
+  
+    ctx.drawImage(imgrez, Width/2-157*heightMod, Height/1.2, 282*heightMod, 84*heightMod);  //draws the restart buttons
     ctx.drawImage(imgcontinue, Width/2-157*heightMod, Height/1.5, 300*heightMod, 84*heightMod)
     
-
-
   contbutton.style.left = `0px`;
   contbutton.style.top = `${Height/1.5}px`;
   contbutton.style.width = `${Width}px`;
   contbutton.style.height = `${90*heightMod}px`;
-  contbutton.addEventListener('click', continuegame )
+  contbutton.addEventListener('click', continuegame )  //places the two invisible buttons
   contbutton.style.display = "block"
   rezbutton.style.left = `0px`;
   rezbutton.style.top = `${Height/1.2}px`;
@@ -49,7 +27,7 @@ function restartbutton() {
   
 }
 
-function continuegame() {
+function continuegame() {  //lets you continue game and keep score
   if (coins > 4) {
   let y = score
   restart()
@@ -57,15 +35,15 @@ function continuegame() {
   coins -= 5}
 }
 
-function gameover() {
+function gameover() { //ends the game and clears a few intervals
   clearInterval(animation)
 setTimeout(gameoverstuff,500)
 }
-function gameoverstuff() { 
+function gameoverstuff() { //fills the screen with white for the endscreen 
   ctx.fillStyle = "White"
   ctx.fillRect(0,0,Width,Height)
 
-  ctx.drawImage(imgend, 0, yMargins, Height*2/3, Height-yMargins*2)
+  ctx.drawImage(imgend, 0, yMargins, Height*2/3, Height-yMargins*2)  //draws the end screen (or part of it)
   drawText()  
    clearInterval(pipeInterval)
 }   
