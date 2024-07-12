@@ -23,10 +23,10 @@ function updateBird() {
 bird.y += movement
 ctx.drawImage(img, bird.x, bird.y, beeSize.w, beeSize.h);
 }
-//makes sure coins spawn at regular intervals
+makes sure coins spawn at regular intervals
 function resetCoin(){  
  spawnCoin=0
-setTimeout(coinwait, interval/4)}
+setTimeout(coinwait, interval*5)}
 
 function coinwait() {spawnCoin=1 } //coins only spawn when spawnCoin = 1, 
 
@@ -37,8 +37,8 @@ function coinwait() {spawnCoin=1 } //coins only spawn when spawnCoin = 1,
  }
 
 function drawCoin() {
-  console.log(spawnCoin)
-  if (spawnCoin==1) {
+
+  if (spawnCoin==1 && pipeSpawned > 4) {
   ctx.drawImage(imgcoin,coin.x,coin.y,coin.h,coin.w)
   console.log("?", spawnCoin)
   coin.x += pipeSpeed  //makes coin move

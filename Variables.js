@@ -84,3 +84,5 @@ imgend.src = "Kinabee end screen.png"
 imgrez.src = "Kinaretry.png"
 imgcoin.src = "costume4 (1).png"
 imgcontinue.src = "KinacontinueB3.png"
+
+let pipeSpawned = 0 //total number of pipes that have been spawned ever
